@@ -1,0 +1,167 @@
+@import "reset";
+/**
+* mobile design: 375px
+*/
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+// defining the variables
+$hbgcolor: hsl(216, 12%, 8%);
+$txtcolor: hsl(0, 0%, 100%);
+$btnbgcolor: hsl(25, 97%, 53%);
+$appbgcolor: hsl(213, 19%, 18%);
+$rttxcolor: hsl(216, 12%, 54%);
+$rtbgcolord: hsl(217, 12%, 63%);
+
+// defining text size
+$fontsize: 1rem;
+//$fntfamily: [Overpass](https://fonts.google.com/specimen/Overpass);
+$fntweight: 700;
+
+body {
+    background: $hbgcolor;
+}
+
+.outer-color {
+    height: 40%;
+    padding: 6em 0;
+    width: 98.2%;
+}
+
+.container {
+    background-color: $appbgcolor;
+    border-radius: 20px;
+
+    margin: 0 auto;
+    width: 92%;
+
+    .hero {
+
+        padding: 1em 0;
+        color: $txtcolor;
+        margin: 0 auto;
+        width: 90%;
+
+        p {
+            color: $rttxcolor;
+            font-size: $fontsize;
+        }
+
+        img {
+            width: 100%;
+            height: auto;
+        }
+
+        .rating-list {
+            align-items: center;
+            display: flex;
+            justify-content: center;
+            width: 100%;
+        }
+
+        .rating-link {
+            background-color: $hbgcolor;
+            border-radius: 55%;
+            font-size: $fontsize;
+            padding: .7em .8em;
+            width: 18%;
+        }
+
+        li + li {
+            margin-left: .6em;
+        }
+
+        .cir-btn {
+            color: $rttxcolor;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-decoration: none;
+        }
+
+        .hero-star {
+            @extend .rating-link;
+        }
+
+        img.hr-star {
+            @extend .cir-btn;
+        }
+
+        .btn-btn {
+            margin: 1em 0;
+        }
+
+        .btn {
+            background-color: $btnbgcolor;
+            border-radius: 100px;
+            color: $txtcolor;
+            font-weight: $fntweight;
+            padding: .80em 4.5em;
+            text-transform: uppercase;
+            width: 100%;
+        }
+
+    }
+
+    .hr-center {
+        text-align: center;
+
+        .hr-img-tky {
+            margin: 0 auto;
+            width: 30%;
+        }
+
+        .rt-btn-result {
+            background-color: $hbgcolor;
+            border-radius: 80px;
+            color: $btnbgcolor;
+            margin: 0 auto;
+            padding: .3em;
+            width: 80%;
+        }
+    }
+
+}
+
+@media (min-width: 375px) {
+
+    .container {
+
+        .hero {
+
+            .rating-link {
+                font-size: $fontsize + .2rem;
+                padding: .82em .8em;
+            }
+
+        }
+
+    }
+
+}
+
+@media (min-width: 980px) {
+
+    .outer-color {
+        height: 20%;
+        width: 100%;
+    }
+
+    .container {
+
+        margin: 0 auto;
+        width: 50%;
+
+        .hero {
+
+            .rating-link {
+                font-size: $fontsize + .5rem;
+                padding: .8em .65em;
+            }
+
+        }
+
+    }
+
+}
